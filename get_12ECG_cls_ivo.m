@@ -11,7 +11,7 @@ function [scores,out_labels]=get_12ECG_cls_ivo(ECG,Header,model)
 
      %Version do_04_02  copiede 11.4.20
 global out_labels_1 out_labels_2 KK_ERROR
-     try
+% % %      try
    Hz=500;
    Hz=H_Fs;
     
@@ -55,18 +55,18 @@ fprintf('do-scores:');fprintf('%8.3f',scores); fprintf('\n');
 %     fprintf('tot_labels1-1:');fprintf('%8.0f',out_labels_1); fprintf('\n');
 %     fprintf('tot_labels1-2:');fprintf('%8.0f',out_labels_2); fprintf('\n');
 
-    catch
-        
- 
-    scores    = [ NaN NaN NaN NaN NaN NaN NaN NaN NaN ];
-    out_labels= [ 1   0   0   0   0   0   0   0   0   ];
-    
-   KK_ERROR=KK_ERROR+1;
-   fprintf('------ ERORR n. %6.0f -------------\n',KK_ERROR);
-
-        if(KK_ERROR>10),GGGG(KK_ERROR)=0;       fprintf('err:%6.0f\n',GGGG(20)); end
-
-    end
+% % %     catch
+% % %         
+% % %  
+% % %     scores    = [ NaN NaN NaN NaN NaN NaN NaN NaN NaN ];
+% % %     out_labels= [ 1   0   0   0   0   0   0   0   0   ];
+% % %     
+% % %    KK_ERROR=KK_ERROR+1;
+% % %    fprintf('------ ERORR n. %6.0f -------------\n',KK_ERROR);
+% % % 
+% % %         if(KK_ERROR>10),GGGG(KK_ERROR)=0;       fprintf('err:%6.0f\n',GGGG(20)); end
+% % % 
+% % %     end
 
 
 
